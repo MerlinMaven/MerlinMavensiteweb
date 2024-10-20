@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon CV - Wiam Serraji</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none'; // Hide all sections
+            });
+            document.getElementById(sectionId).style.display = 'block'; // Show the selected section
+        }
+    </script>
+</head>
+<body onload="showSection('home')"> <!-- Load home section by default -->
+    <header class="header">
+        <a href="#home" class="logo"><span>W</span>iam.</a>
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0);" onclick="showSection('home')" class="active">Accueil</a></li>
+                <li><a href="javascript:void(0);" onclick="showSection('aboutme')">À Propos de Moi</a></li>
+                <li><a href="javascript:void(0);" onclick="showSection('portfolio')">Portfolio</a></li>
+                <li><a href="javascript:void(0);" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <div id="home" class="section">
+            <h1>Bonjour, je suis <br><span>Wiam Serraji.</span> Ingénieur en IA</h1>
+            <p>
+                Je me spécialise dans la création de solutions basées sur l'IA et j'ai une passion
+                pour le développement de technologies innovantes. Avec un bagage en apprentissage
+                automatique et en apprentissage profond, je m'efforce de résoudre des problèmes complexes
+                et de créer des applications impactantes.
+            </p>
+            <div class="btn-box">
+                <button class="btn btn-1">Engagez-moi</button>
+                <a href="cv.pdf" class="btn btn--download"><i class="fa fa-download"></i> Télécharger CV</a>
+            </div>
+            <img src="images/christina-wocintechchat-com-0Zx1bDv5BNY-unsplash.jpg" alt="mon image" />
+        </div>
+
+        <!-- About Me Section -->
+        <div id="aboutme" class="section" style="display:none;">
+            <h1>À Propos de Moi</h1>
+            <p>Bonjour ! Je suis Wiam, un étudiant passionné en ingénierie IA, dédié à l'utilisation de la technologie pour résoudre des problèmes complexes.</p>
+            <p>Je m'intéresse au développement de systèmes intelligents, à la participation à des compétitions de robotique, ainsi qu'à l'apprentissage des dernières avancées en intelligence artificielle.</p>
+            <p>Mon ambition est de contribuer à des projets innovants qui peuvent améliorer la vie des gens et façonner l'avenir de la technologie.</p>
+
+            <h2>Ce que Je Fais</h2>
+            <div class="work">
+                <div class="workbox">
+                    <h3>Robotics</h3>
+                    <p>Création et développement de systèmes robotiques intelligents pour l'automatisation et l'ingénierie des tâches complexes.</p>
+                </div>
+                <div class="workbox">
+                    <h3>Chess</h3>
+                    <p>Analyse stratégique des parties d'échecs et développement de modèles d'IA pour les jeux.</p>
+                </div>
+                <div class="workbox">
+                    <h3>Cybersécurité</h3>
+                    <p>Protection des systèmes informatiques contre les menaces cybernétiques via des solutions avancées de sécurité.</p>
+                </div>
+                <div class="workbox">
+                    <h3>Développement Web</h3>
+                    <p>Conception et création de sites Web interactifs et réactifs avec une approche orientée utilisateur.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Section -->
+        <div id="portfolio" class="section" style="display:none;">
+            <h2>Mes Projets Robotiques</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3>Système Domotique Intelligent</h3>
+                    <p>Conception d'un système d'automatisation domestique utilisant des microcontrôleurs ESP32.</p>
+                    <span>2024 - En cours</span>
+                </div>
+                <div class="project-item">
+                    <h3>Projet de Drone Autonome</h3>
+                    <p>Développement d'un drone autonome pour la surveillance aérienne.</p>
+                    <span>2024 - En cours</span>
+                </div>
+            </div>
+
+            <h2>Formation</h2>
+            <div class="education-item">
+                <h3>Ingénierie en IA</h3>
+                <p>Étudiante en cycle ingénieur, spécialisée en Génie Intelligence Artificielle et Data Technologies.</p>
+                <span>2023 - En cours</span>
+            </div>
+            <div class="education-item">
+                <h3>Baccalauréat Scientifique</h3>
+                <p>Baccalauréat sciences mathématiques B, option française.</p>
+                <span>2022 - 2021</span>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contact" class="section" style="display:none;">
+            <h2>Contactez-moi</h2>
+            <p>Merci de votre intérêt ! Pour toute question ou collaboration, n'hésitez pas à me contacter.</p>
+            <div class="contactInfo">
+                <div class="box">
+                    <h3>Adresse</h3>
+                    <p>Immeuble 32, Tranche 1,<br>Marjane 1,Fes, Maroc</p>
+                </div>
+                <div class="box">
+                    <h3>Téléphone</h3>
+                    <p>+212 664462815</p>
+                </div>
+                <div class="box">
+                    <h3>Email</h3>
+                    <p>xxxxxxxxxx@gmail.com</p>
+                </div>
+            </div>
+            <div class="contactForm">
+                <h2>Envoyez un message</h2>
+                <form>
+                    <input type="text" name="fullName" required="required" placeholder="Nom complet">
+                    <input type="email" name="email" required="required" placeholder="Email">
+                    <textarea required="required" placeholder="Écrivez votre message..."></textarea>
+                    <input type="submit" value="Envoyer">
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Wiam. Tous droits réservés.</p>
+        <div>
+            <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.github.com"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
